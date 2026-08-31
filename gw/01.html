@@ -50,6 +50,11 @@
  .chip-bad .cs{color:var(--wrong)}
  .chip-live .cs{color:var(--fg-dim)}
  .chip-on{border-color:var(--accent)}
+ .chip-skip .cs{color:var(--fg-dim)}
+ .chip-skip{border-style:dashed}
+ .gw-skip .gwmeta{color:var(--fg-dim)}
+ .skipnote{color:var(--muted);font-size:.94rem;line-height:1.55;margin:.5rem 0 0;
+   padding:.7rem .9rem;border:1px dashed var(--border);border-radius:8px}
  .back{display:inline-block;font-family:var(--mono);font-size:12px;color:var(--fg-dim);
   text-decoration:none;margin-bottom:var(--s3)}
  .back:hover{color:var(--fg)}
@@ -132,7 +137,7 @@
   <h1>Gameweek 1</h1>
   <p class="lede">Gameweek 1: 5 calls right, 5 wrong.</p>
 </header>
-<nav class="strip" aria-label="Every gameweek"><a class="chip chip-on" href="../gw/01.html" aria-label="Gameweek 1, 5 of 10 right"><span class="cg">GW1</span><span class="cs">5/10</span></a></nav>
+<nav class="strip" aria-label="Every gameweek"><a class="chip chip-skip" href="../gw/02.html" aria-label="Gameweek 2, no calls published"><span class="cg">GW2</span><span class="cs">none</span></a><a class="chip chip-on" href="../gw/01.html" aria-label="Gameweek 1, 5 of 10 right"><span class="cg">GW1</span><span class="cs">5/10</span></a></nav>
 <section class="gw" aria-labelledby="gw1">
   <div class="gwhead">
     <h2 id="gw1">Gameweek 1</h2>

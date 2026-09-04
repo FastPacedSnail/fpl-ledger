@@ -204,7 +204,7 @@
 <div class="cta">
   <h2 id="signup">Get this for your own squad</h2>
   <p>The names above are the ones most people own. The players in your fifteen are your own. Leave your team ID and I will run the same calls against your squad.</p>
-  <form class="su" action="https://formsubmit.co/zidansoccer@gmail.com" method="POST">
+  <form class="su" action="https://formsubmit.co/752788dce86e0b5930410c6fdb08bf8f" method="POST">
     <div class="f">
       <label for="email">Email</label>
       <input id="email" name="email" type="email" autocomplete="email" required
@@ -218,6 +218,21 @@
       <p class="h" id="teamid-h">Open the Fantasy Premier League site, go to Points, and it is the number in the address bar after <code>/entry/</code>.</p>
     </div>
     <input type="hidden" name="_subject" value="New ledger signup">
+    <!--
+      _captcha=false REMOVES A STEP THAT WOULD HAVE COST MOST OF THE SIGNUPS. By default
+      FormSubmit answers a submission with its own page reading "Almost There - please help
+      us fight spam by clicking the box below". So a visitor who typed their email and team
+      ID got bounced to a third-party domain and asked to prove they were human before
+      anything was sent. Found on 4 Sep 2026 by submitting the real form rather than
+      reading about it. The _honey field below is the anti-spam trade: a hidden input real
+      people never fill, checked server-side, with no step for anyone honest.
+
+      _next sends them back here afterwards instead of leaving them on formsubmit.co
+      wondering whether it worked.
+    -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://fpl-ledger-pi.vercel.app/thanks.html">
+    <input type="hidden" name="_template" value="table">
     <input type="text" name="_honey" style="display:none" tabindex="-1" aria-hidden="true">
     <button class="btn" type="submit">Sign up</button>
     <p class="priv">Your email and team ID are used for one thing: sending you the calls for your own squad. No marketing, not shared, not sold. Ask me at any time and I will delete both. The form itself is handled by FormSubmit, who pass the message on to me. Controller: Arun Pisharody.</p>
